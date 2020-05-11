@@ -66,7 +66,7 @@ message (STATUS "Headers : ${generated_headers}")
 message (STATUS "Sources : ${generated_srcs}")
 
 include_directories(
-    ${PROJECT_SOURCE_DIR}/submodules/protobuf/src
+    ${PROJECT_SOURCE_DIR}/external/protobuf/src
     ${output_directory}
 )
 
