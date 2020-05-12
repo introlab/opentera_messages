@@ -6,10 +6,11 @@ message ParticipantEvent {
 
     enum EventType
     {
-        PARTICIPANT_CONNECTED = 0;
-        PARTICIPANT_DISCONNECTED = 1;
-        PARTICIPANT_DELETED = 2;
-        PARTICIPANT_ADDED = 3;
+	PARTICIPANT_UNKNOWN = 0;
+        PARTICIPANT_CONNECTED = 1;
+        PARTICIPANT_DISCONNECTED = 2;
+        PARTICIPANT_DELETED = 3;
+        PARTICIPANT_ADDED = 4;
     }
     string participant_uuid = 1;
     EventType type = 2;

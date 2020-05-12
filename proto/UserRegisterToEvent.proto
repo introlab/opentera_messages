@@ -6,32 +6,35 @@ message UserRegisterToEvent {
 
     enum EventType
     {
+	EVENT_UNKONWN = 0;
+
         //USER_EVENTS
-        USER_CONNECTED = 0;
-        USER_DISCONNECTED = 1;
-        USER_DELETED = 2;
-        USER_ADDED = 3;
-        USER_UPDATED = 4;
+        EVENT_USER_CONNECTED = 1;
+        EVENT_USER_DISCONNECTED = 2;
+        EVENT_USER_DELETED = 3;
+        EVENT_USER_ADDED = 4;
+        EVENT_USER_UPDATED = 5;
 
         //PARTICIPANT_EVENTS
-        PARTICIPANT_CONNECTED = 5;
-        PARTICIPANT_DISCONNECTED = 6;
-        PARTICIPANT_DELETED = 7;
-        PARTICIPANT_ADDED = 8;
-        PARTICIPANT_UPDATED = 9;
+        EVENT_PARTICIPANT_CONNECTED = 6;
+        EVENT_PARTICIPANT_DISCONNECTED = 5;
+        EVENT_PARTICIPANT_DELETED = 8;
+        EVENT_PARTICIPANT_ADDED = 9;
+        EVENT_PARTICIPANT_UPDATED = 10;
 
         //PARTICIPANT_EVENTS
-        DEVICE_CONNECTED = 10;
-        DEVICE_DISCONNECTED = 11;
-        DEVICE_DELETED = 12;
-        DEVICE_ADDED = 13;
-        DEVICE_UPDATED = 14;
+        EVENT_DEVICE_CONNECTED = 11;
+        EVENT_DEVICE_DISCONNECTED = 12;
+        EVENT_DEVICE_DELETED = 13;
+        EVENT_DEVICE_ADDED = 14;
+        EVENT_DEVICE_UPDATED = 15;
     }
 
     enum Action
     {
-        REGISTER = 0;
-        UNREGISTER = 1;
+	ACTION_UNKONWN = 0;
+        ACTION_REGISTER = 1;
+        ACTION_UNREGISTER = 2;
     }
 
     EventType event_type = 1;
