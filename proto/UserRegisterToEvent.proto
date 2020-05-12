@@ -33,7 +33,7 @@ message UserRegisterToEvent {
 
     enum Action
     {
-	ACTION_UNKONWN = 0;
+	    ACTION_UNKNOWN = 0;
         ACTION_REGISTER = 1;
         ACTION_UNREGISTER = 2;
     }

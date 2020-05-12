@@ -6,7 +6,7 @@ message Result {
 
     enum ResultType
     {
-	RESULT_UNKNOWN = 0;
+	    RESULT_UNKNOWN = 0;
         RESULT_OK = 1;
         RESULT_ERROR = 2;
         RESULT_WARNING = 3;
