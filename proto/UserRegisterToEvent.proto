@@ -6,7 +6,8 @@ message UserRegisterToEvent {
 
     enum EventType
     {
-	EVENT_UNKONWN = 0;
+        //DEFAULT
+	    EVENT_UNKNOWN = 0;
 
         //USER_EVENTS
         EVENT_USER_CONNECTED = 1;
