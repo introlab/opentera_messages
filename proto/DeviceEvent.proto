@@ -6,7 +6,7 @@ message DeviceEvent {
 
     enum EventType
     {
-	DEVICE_UNKNOWN = 0
+        DEVICE_UNKNOWN = 0;
         DEVICE_CONNECTED = 1;
         DEVICE_DISCONNECTED = 2;
         DEVICE_DELETED = 3;
