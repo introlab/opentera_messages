@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+import "google/protobuf/any.proto";
+
+package opentera.protobuf;
+
+message TeraEvent {
+    message Header {
+        uint32 version = 1;
+        double time = 2;
+    }
+
+    Header header = 1;
+    repeated google.protobuf.Any events = 2;
+}
