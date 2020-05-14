@@ -1,9 +1,0 @@
-syntax = "proto3";
-
-import "google/protobuf/any.proto";
-
-package opentera.protobuf;
-
-message TeraAnyMessage {
-    google.protobuf.Any message = 1;
-}
