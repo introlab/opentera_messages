@@ -6,9 +6,9 @@ from .Result_pb2 import Result
 from .RPCMessage_pb2 import RPCMessage
 from .ServerCommand_pb2 import ServerCommand
 from .StopSessionEvent_pb2 import StopSessionEvent
-from .TeraAnyMessage_pb2 import TeraAnyMessage
 from .TeraEvent_pb2 import TeraEvent
 from .TeraMessage_pb2 import TeraMessage
+from .TeraModuleMessage_pb2 import TeraModuleMessage
 from .UserEvent_pb2 import UserEvent
 from .UserRegisterToEvent_pb2 import UserRegisterToEvent
 from google.protobuf.any_pb2 import Any
@@ -22,9 +22,9 @@ __all__ = ['CreateSession',
            'RPCMessage',
            'ServerCommand',
            'StopSessionEvent',
-           'TeraAnyMessage',
            'TeraEvent',
            'TeraMessage',
+           'TeraModuleMessage',
            'UserEvent',
            'UserRegisterToEvent',
            'Any']
