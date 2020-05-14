@@ -6,11 +6,12 @@ message UserEvent {
 
     enum EventType
     {
-	USER_UNKNOWN = 0;
+        USER_UNKNOWN = 0;
         USER_CONNECTED = 1;
         USER_DISCONNECTED = 2;
         USER_DELETED = 3;
         USER_ADDED = 4;
+        USER_UPDATED = 5;
     }
     string user_uuid = 1;
     EventType type = 2;
