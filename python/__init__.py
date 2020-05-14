@@ -6,6 +6,7 @@ from .Result_pb2 import Result
 from .RPCMessage_pb2 import RPCMessage
 from .ServerCommand_pb2 import ServerCommand
 from .StopSessionEvent_pb2 import StopSessionEvent
+from .TeraAnyMessage_pb2 import TeraAnyMessage
 from .TeraEvent_pb2 import TeraEvent
 from .TeraMessage_pb2 import TeraMessage
 from .UserEvent_pb2 import UserEvent
@@ -13,5 +14,17 @@ from .UserRegisterToEvent_pb2 import UserRegisterToEvent
 from google.protobuf.any_pb2 import Any
 
 # All exported symbols
-__all__ = ['CreateSession', 'DeviceEvent', 'JoinSessionEvent', 'ParticipantEvent', 'Result', 'RPCMessage',
-           'ServerCommand', 'StopSessionEvent', 'TeraEvent', 'TeraMessage', 'UserEvent', 'UserRegisterToEvent', 'Any']
+__all__ = ['CreateSession',
+           'DeviceEvent',
+           'JoinSessionEvent',
+           'ParticipantEvent',
+           'Result',
+           'RPCMessage',
+           'ServerCommand',
+           'StopSessionEvent',
+           'TeraAnyMessage',
+           'TeraEvent',
+           'TeraMessage',
+           'UserEvent',
+           'UserRegisterToEvent',
+           'Any']

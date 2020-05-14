@@ -12,8 +12,6 @@ message TeraMessage {
         string source = 4;
         string dest = 5;
     }
-
     Header head = 1;
-
     repeated google.protobuf.Any data = 2;
 }
