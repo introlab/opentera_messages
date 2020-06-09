@@ -11,12 +11,14 @@ from .TeraMessage_pb2 import TeraMessage
 from .TeraModuleMessage_pb2 import TeraModuleMessage
 from .UserEvent_pb2 import UserEvent
 from .UserRegisterToEvent_pb2 import UserRegisterToEvent
+from .JoinSessionReply_pb2 import JoinSessionReply
 from google.protobuf.any_pb2 import Any
 
 # All exported symbols
 __all__ = ['CreateSession',
            'DeviceEvent',
            'JoinSessionEvent',
+           'JoinSessionReply',
            'ParticipantEvent',
            'Result',
            'RPCMessage',

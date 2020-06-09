@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package opentera.protobuf;
+
+message JoinSessionReply {
+
+  enum ReplyType{
+    REPLY_UNKNOWN = 0;
+    REPLY_ACCEPTED = 1;
+    REPLY_DENIED = 2;
+    REPLY_BUSY = 3;
+  }
+
+  string session_uuid = 1;
+  ReplyType join_reply = 2;
+  string reply_msg = 3;
+}

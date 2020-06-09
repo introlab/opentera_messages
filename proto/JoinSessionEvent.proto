@@ -4,4 +4,12 @@ package opentera.protobuf;
 
 message JoinSessionEvent {
     string session_url = 1;
+    string session_creator_name = 2;
+    string session_uuid = 3;
+    repeated string session_participants = 4;
+    repeated string session_users = 5;
+    repeated string session_devices = 6;
+    string join_msg = 7;
+    string session_parameters = 8;
+    string service_uuid = 9;
 }
