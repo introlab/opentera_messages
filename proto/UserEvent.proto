@@ -15,6 +15,6 @@ message UserEvent {
     }
     string user_uuid = 1;
     EventType type = 2;
-
+    string user_fullname = 3;
 
 }
