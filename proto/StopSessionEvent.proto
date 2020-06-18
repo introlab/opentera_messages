@@ -3,5 +3,6 @@ syntax = "proto3";
 package opentera.protobuf;
 
 message StopSessionEvent {
-    string session_key = 1;
+    string session_uuid = 1;
+    string service_uuid = 2;
 }
