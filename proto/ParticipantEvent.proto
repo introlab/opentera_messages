@@ -14,5 +14,7 @@ message ParticipantEvent {
     }
     string participant_uuid = 1;
     EventType type = 2;
-
+    string participant_name = 3;
+    string participant_project_name = 4;
+    string participant_site_name = 5;
 }
