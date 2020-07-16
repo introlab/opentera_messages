@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package opentera.protobuf;
+
+message LogEvent {
+
+    enum LogLevel
+    {
+        LOGLEVEL_UNKNOWN = 0;
+        LOGLEVEL_TRACE = 1;
+        LOGLEVEL_DEBUG = 2;
+        LOGLEVEL_INFO = 3;
+        LOGLEVEL_WARNING = 4;
+        LOGLEVEL_CRITICAL = 5;
+        LOGLEVEL_ERROR = 6;
+        LOGLEVEL_FATAL = 7;
+    }
+
+    LogLevel level = 1;
+    double timestamp = 2;
+    string sender = 3;
+    string message = 4;
+}

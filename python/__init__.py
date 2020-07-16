@@ -12,6 +12,7 @@ from .TeraModuleMessage_pb2 import TeraModuleMessage
 from .UserEvent_pb2 import UserEvent
 from .UserRegisterToEvent_pb2 import UserRegisterToEvent
 from .JoinSessionReply_pb2 import JoinSessionReply
+from .LogEvent_pb2 import LogEvent
 from google.protobuf.any_pb2 import Any
 
 # All exported symbols
@@ -19,6 +20,7 @@ __all__ = ['CreateSession',
            'DeviceEvent',
            'JoinSessionEvent',
            'JoinSessionReply',
+           'LogEvent',
            'ParticipantEvent',
            'Result',
            'RPCMessage',
