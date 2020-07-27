@@ -1,4 +1,5 @@
 from .CreateSession_pb2 import CreateSession
+from .DatabaseEvent_pb2 import DatabaseEvent
 from .DeviceEvent_pb2 import DeviceEvent
 from .JoinSessionEvent_pb2 import JoinSessionEvent
 from .ParticipantEvent_pb2 import ParticipantEvent
@@ -17,6 +18,7 @@ from google.protobuf.any_pb2 import Any
 
 # All exported symbols
 __all__ = ['CreateSession',
+           'DatabaseEvent',
            'DeviceEvent',
            'JoinSessionEvent',
            'JoinSessionReply',

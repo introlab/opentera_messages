@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package opentera.protobuf;
+
+message DatabaseEvent {
+
+    enum EventType
+    {
+        DB_UNKNOWN = 0;
+        DB_CREATE = 1;
+        DB_UPDATE = 2;
+        DB_DELETE = 3;
+    }
+
+    EventType type = 1;
+    string object_type = 2;
+    string object_value = 3;
+
+}
