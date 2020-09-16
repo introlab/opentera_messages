@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package opentera.protobuf;
+
+message LeaveSessionEvent {
+    string session_uuid = 1;
+    string service_uuid = 2;
+    repeated string leaving_participants = 3;
+    repeated string leaving_users = 4;
+    repeated string leaving_devices = 5;
+}
