@@ -11,6 +11,8 @@ message DeviceEvent {
         DEVICE_DISCONNECTED = 2;
         DEVICE_DELETED = 3;
         DEVICE_ADDED = 4;
+        DEVICE_JOINED_SESSION = 5;
+        DEVICE_LEFT_SESSION = 6;
     }
     string device_uuid = 1;
     EventType type = 2;

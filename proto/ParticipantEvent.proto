@@ -11,6 +11,8 @@ message ParticipantEvent {
         PARTICIPANT_DISCONNECTED = 2;
         PARTICIPANT_DELETED = 3;
         PARTICIPANT_ADDED = 4;
+        PARTICIPANT_JOINED_SESSION = 5;
+        PARTICIPANT_LEFT_SESSION = 6;
     }
     string participant_uuid = 1;
     EventType type = 2;

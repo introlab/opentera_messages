@@ -12,6 +12,8 @@ message UserEvent {
         USER_DELETED = 3;
         USER_ADDED = 4;
         USER_UPDATED = 5;
+        USER_JOINED_SESSION = 6;
+        USER_LEFT_SESSION = 7;
     }
     string user_uuid = 1;
     EventType type = 2;
