@@ -14,4 +14,5 @@ message DeviceEvent {
     }
     string device_uuid = 1;
     EventType type = 2;
+    string device_name = 3;
 }
