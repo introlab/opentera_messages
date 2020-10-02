@@ -15,6 +15,7 @@ from .UserRegisterToEvent_pb2 import UserRegisterToEvent
 from .JoinSessionReply_pb2 import JoinSessionReply
 from .LeaveSessionEvent_pb2 import LeaveSessionEvent
 from .LogEvent_pb2 import LogEvent
+from .LeaveSessionEvent_pb2 import LeaveSessionEvent
 from google.protobuf.any_pb2 import Any
 
 # All exported symbols
@@ -23,6 +24,7 @@ __all__ = ['CreateSession',
            'DeviceEvent',
            'JoinSessionEvent',
            'JoinSessionReply',
+           'LeaveSessionEvent',
            'LogEvent',
            'ParticipantEvent',
            'Result',
