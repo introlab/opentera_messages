@@ -12,7 +12,7 @@ from .TeraMessage_pb2 import TeraMessage
 from .TeraModuleMessage_pb2 import TeraModuleMessage
 from .UserEvent_pb2 import UserEvent
 from .UserRegisterToEvent_pb2 import UserRegisterToEvent
-from .JoinSessionReply_pb2 import JoinSessionReply
+from .JoinSessionReplyEvent_pb2 import JoinSessionReplyEvent
 from .LeaveSessionEvent_pb2 import LeaveSessionEvent
 from .LogEvent_pb2 import LogEvent
 from .LeaveSessionEvent_pb2 import LeaveSessionEvent
@@ -23,7 +23,7 @@ __all__ = ['CreateSession',
            'DatabaseEvent',
            'DeviceEvent',
            'JoinSessionEvent',
-           'JoinSessionReply',
+           'JoinSessionReplyEvent',
            'LeaveSessionEvent',
            'LogEvent',
            'ParticipantEvent',
