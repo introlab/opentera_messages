@@ -86,3 +86,9 @@ message (STATUS "includes : ${all_includes}")
 
 set(OPENTERA_MESSAGES_INCLUDES ${all_includes} CACHE INTERNAL "doc string")
 set(OPENTERA_MESSAGES_LIBS "opentera_messages" CACHE INTERNAL "doc string")
+
+# Install
+install(TARGETS opentera_messages
+    RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
+    LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
+    ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR})
