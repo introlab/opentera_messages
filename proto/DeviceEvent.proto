@@ -13,8 +13,10 @@ message DeviceEvent {
         DEVICE_ADDED = 4;
         DEVICE_JOINED_SESSION = 5;
         DEVICE_LEFT_SESSION = 6;
+        DEVICE_STATUS_CHANGED = 7;
     }
     string device_uuid = 1;
     EventType type = 2;
     string device_name = 3;
+    string device_status = 4;
 }
