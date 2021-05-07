@@ -6,16 +6,16 @@ message JoinSessionReplyEvent {
 
   enum ReplyType{
     REPLY_UNKNOWN = 0;
-    REPLY_ACCEPTED = 1;
-    REPLY_DENIED = 2;
-    REPLY_BUSY = 3;
-    REPLY_TIMEOUT = 4;
+    REPLY_ACCEPTED = 1;       // Guest accepted the invitation
+    REPLY_DENIED = 2;         // Guest refused the invitation
+    REPLY_BUSY = 3;           // Guest replied that it was too busy to accept the invitation... :(
+    REPLY_TIMEOUT = 4;        // Guest didn't reply in a timely frame or simply refused to reply.
   }
 
-  string session_uuid = 1;
-  string user_uuid = 2;
-  string participant_uuid = 3;
-  string device_uuid = 4;
-  ReplyType join_reply = 5;
-  string reply_msg = 6;
+  string session_uuid = 1;      // Session UUID related to the original invitation
+  string user_uuid = 2;         // User UUID of the guest replying, if appropriate
+  string participant_uuid = 3;  // Participant UUID of the guest replying, if appropriate
+  string device_uuid = 4;       // Device UUID of the guest replying, if appropriate
+  ReplyType join_reply = 5;     // Reply
+  string reply_msg = 6;         // Optional message explaining the reply
 }

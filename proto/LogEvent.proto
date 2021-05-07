@@ -16,8 +16,8 @@ message LogEvent {
         LOGLEVEL_FATAL = 1;
     }
 
-    LogLevel level = 1;
-    double timestamp = 2;
-    string sender = 3;
-    string message = 4;
+    LogLevel level = 1;     // Log level
+    double timestamp = 2;   // Timestamp at which the log event occured
+    string sender = 3;      // Topic name style of the module / service sending the log
+    string message = 4;     // Log message (format is left to each of the sender)
 }

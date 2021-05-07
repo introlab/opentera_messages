@@ -7,16 +7,16 @@ message DeviceEvent {
     enum EventType
     {
         DEVICE_UNKNOWN = 0;
-        DEVICE_CONNECTED = 1;
-        DEVICE_DISCONNECTED = 2;
-        DEVICE_DELETED = 3;
-        DEVICE_ADDED = 4;
-        DEVICE_JOINED_SESSION = 5;
-        DEVICE_LEFT_SESSION = 6;
-        DEVICE_STATUS_CHANGED = 7;
+        DEVICE_CONNECTED = 1;       // Device is now online
+        DEVICE_DISCONNECTED = 2;    // Device is now offline
+        DEVICE_DELETED = 3;         // Device was deleted from the database. DEPRECATED - see DatabaseEvent
+        DEVICE_ADDED = 4;           // Device was added in the database. DEPRECATED - see DatabaseEvent
+        DEVICE_JOINED_SESSION = 5;  // Device joined a session.
+        DEVICE_LEFT_SESSION = 6;    // Device left a session.
+        DEVICE_STATUS_CHANGED = 7;  // Device status was updated (changed).
     }
-    string device_uuid = 1;
-    EventType type = 2;
-    string device_name = 3;
-    string device_status = 4;
+    string device_uuid = 1;         // Device UUID
+    EventType type = 2;             // Device event type
+    string device_name = 3;         // Device name
+    string device_status = 4;       // JSON formatted string of the device status
 }

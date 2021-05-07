@@ -7,16 +7,16 @@ message UserEvent {
     enum EventType
     {
         USER_UNKNOWN = 0;
-        USER_CONNECTED = 1;
-        USER_DISCONNECTED = 2;
-        USER_DELETED = 3;
-        USER_ADDED = 4;
-        USER_UPDATED = 5;
-        USER_JOINED_SESSION = 6;
-        USER_LEFT_SESSION = 7;
+        USER_CONNECTED = 1;         // User is now online
+        USER_DISCONNECTED = 2;      // User is now offline
+        USER_DELETED = 3;           // User was deleted from the database. DEPRECATED - see DatabaseEvent
+        USER_ADDED = 4;             // User was added in the database. DEPRECATED - see DatabaseEvent
+        USER_UPDATED = 5;           // User was updated in the database. DEPRECATED - see DatabaseEvent
+        USER_JOINED_SESSION = 6;    // User joined a session
+        USER_LEFT_SESSION = 7;      // User left a session
     }
-    string user_uuid = 1;
-    EventType type = 2;
-    string user_fullname = 3;
+    string user_uuid = 1;           // User UUID
+    EventType type = 2;             // User event type
+    string user_fullname = 3;       // Full name of the user to which the event is related
 
 }

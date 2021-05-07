@@ -3,13 +3,13 @@ syntax = "proto3";
 package opentera.protobuf;
 
 message JoinSessionEvent {
-    string session_url = 1;
-    string session_creator_name = 2;
-    string session_uuid = 3;
-    repeated string session_participants = 4;
-    repeated string session_users = 5;
-    repeated string session_devices = 6;
-    string join_msg = 7;
-    string session_parameters = 8;
-    string service_uuid = 9;
+    string session_url = 1;                     // URL the client will have to point to to join the session
+    string session_creator_name = 2;            // Name of the creator name, be it a user, participant, device or service
+    string session_uuid = 3;                    // Session unique ID (UUID)
+    repeated string session_participants = 4;   // List of invited participants UUIDs
+    repeated string session_users = 5;          // List of invited users UUIDs
+    repeated string session_devices = 6;        // List of invited devices UUIDs
+    string join_msg = 7;                        // Message to display to invite to this session
+    string session_parameters = 8;              // JSON formatted string with specific parameters for this session
+    string service_uuid = 9;                    // Service UUID related to that session, if applicable
 }

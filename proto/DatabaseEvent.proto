@@ -7,13 +7,15 @@ message DatabaseEvent {
     enum EventType
     {
         DB_UNKNOWN = 0;
-        DB_CREATE = 1;
-        DB_UPDATE = 2;
-        DB_DELETE = 3;
+        DB_CREATE = 1;      // A new object of that type was added to the database
+        DB_UPDATE = 2;      // The object was updated in the database
+        DB_DELETE = 3;      // The object was deleted in the database
     }
 
-    EventType type = 1;
-    string object_type = 2;
-    string object_value = 3;
+    EventType type = 1;         // Database event type
+    string object_type = 2;     // String representing the database object type. This is the name of the model.
+    string object_value = 3;    // JSON formatted string with the current object value. If the event type was a delete
+                                // operation, object_value will be the id of the deleted object (a JSON dictionnary with
+                                // the id field name and the id value).
 
 }

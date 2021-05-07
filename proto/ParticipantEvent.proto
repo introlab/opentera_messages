@@ -6,17 +6,17 @@ message ParticipantEvent {
 
     enum EventType
     {
-	PARTICIPANT_UNKNOWN = 0;
-        PARTICIPANT_CONNECTED = 1;
-        PARTICIPANT_DISCONNECTED = 2;
-        PARTICIPANT_DELETED = 3;
-        PARTICIPANT_ADDED = 4;
-        PARTICIPANT_JOINED_SESSION = 5;
-        PARTICIPANT_LEFT_SESSION = 6;
+	      PARTICIPANT_UNKNOWN = 0;
+        PARTICIPANT_CONNECTED = 1;      // Participant is now online
+        PARTICIPANT_DISCONNECTED = 2;   // Participant is now offline
+        PARTICIPANT_DELETED = 3;        // Participant was deleted from the database. DEPRECATED - see DatabaseEvent
+        PARTICIPANT_ADDED = 4;          // Participant was added in the database. DEPRECATED - see DatabaseEvent
+        PARTICIPANT_JOINED_SESSION = 5; // Participant joined a session
+        PARTICIPANT_LEFT_SESSION = 6;   // Participant left a session
     }
-    string participant_uuid = 1;
-    EventType type = 2;
-    string participant_name = 3;
-    string participant_project_name = 4;
-    string participant_site_name = 5;
+    string participant_uuid = 1;            // Participant UUID
+    EventType type = 2;                     // Participant event type
+    string participant_name = 3;            // Participant name
+    string participant_project_name = 4;    // Name of the project that the participant is part of
+    string participant_site_name = 5;       // Name of the site that the participant is part of
 }
