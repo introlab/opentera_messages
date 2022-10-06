@@ -1,3 +1,7 @@
+import sys
+import os
+sys.path.insert(0, os.path.abspath(os.path.dirname(__file__)))
+
 from .CreateSession_pb2 import CreateSession
 from .DatabaseEvent_pb2 import DatabaseEvent
 from .DeviceEvent_pb2 import DeviceEvent
@@ -19,6 +23,9 @@ from .LeaveSessionEvent_pb2 import LeaveSessionEvent
 from .LoginEvent_pb2 import LoginEvent
 
 from google.protobuf.any_pb2 import Any
+
+
+
 
 # All exported symbols
 __all__ = ['CreateSession',
