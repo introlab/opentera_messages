@@ -16,6 +16,8 @@ from .JoinSessionReplyEvent_pb2 import JoinSessionReplyEvent
 from .LeaveSessionEvent_pb2 import LeaveSessionEvent
 from .LogEvent_pb2 import LogEvent
 from .LeaveSessionEvent_pb2 import LeaveSessionEvent
+from .LoginEvent_pb2 import LoginEvent
+
 from google.protobuf.any_pb2 import Any
 
 # All exported symbols
@@ -37,4 +39,5 @@ __all__ = ['CreateSession',
            'TeraModuleMessage',
            'UserEvent',
            'UserRegisterToEvent',
+           'LoginEvent',
            'Any']

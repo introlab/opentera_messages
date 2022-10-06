@@ -8,7 +8,7 @@ message ServerCommand {
 
     enum CommandType
     {
-	CMD_UNKNOWN = 0;
+	      CMD_UNKNOWN = 0;
         CMD_REGISTER_DEVICE = 1;
     }
     CommandType type = 1;
