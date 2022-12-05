@@ -14,5 +14,4 @@ message ServerCommand {
     }
     CommandType type = 1;
     google.protobuf.Any data = 2;
-
 }
