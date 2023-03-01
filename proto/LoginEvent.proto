@@ -1,0 +1,46 @@
+syntax = "proto3";
+package opentera.protobuf;
+
+import "LogEvent.proto";
+
+message LoginEvent {
+
+  enum LoginStatus {
+    LOGIN_STATUS_UNKNOWN = 0;
+    LOGIN_STATUS_SUCCESS = 1;
+    LOGIN_STATUS_FAILED_WITH_WRONG_PASSWORD = 2;
+    LOGIN_STATUS_FAILED_WITH_WRONG_USERNAME = 3;
+    LOGIN_STATUS_FAILED_WITH_MAX_ATTEMPTS_REACHED = 4;
+    LOGIN_STATUS_FAILED_WITH_ALREADY_LOGGED_IN = 5;
+    LOGIN_STATUS_FAILED_WITH_INVALID_TOKEN = 6;
+    LOGIN_STATUS_FAILED_WITH_DISABLED_ACCOUNT = 7;
+    LOGIN_STATUS_FAILED_WITH_EXPIRED_TOKEN = 8;
+  }
+
+  enum LoginType {
+    LOGIN_TYPE_UNKNOWN = 0;
+    LOGIN_TYPE_TOKEN = 1;
+    LOGIN_TYPE_PASSWORD = 2;
+    LOGIN_TYPE_CERTIFICATE = 3;
+  }
+
+  LogEvent log_header = 1;
+  LoginType login_type = 2;
+  LoginStatus login_status = 3;
+
+  // CLIENT INFO
+  string client_name = 4;
+  string client_version = 5;
+  string client_ip = 6;
+  string os_name = 7;
+  string os_version = 8;
+
+  // UUIDS
+  string user_uuid = 9;
+  string participant_uuid = 10;
+  string device_uuid = 11;
+  string service_uuid = 12;
+
+  // SERVER INFO
+  string server_endpoint = 13;
+}

@@ -8,10 +8,10 @@ message ServerCommand {
 
     enum CommandType
     {
-	CMD_UNKNOWN = 0;
+	      CMD_UNKNOWN = 0;
         CMD_REGISTER_DEVICE = 1;
+        CMD_CLIENT_DISCONNECT = 2;
     }
     CommandType type = 1;
     google.protobuf.Any data = 2;
-
 }
