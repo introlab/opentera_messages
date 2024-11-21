@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package opentera.protobuf;
+
+message ArchiveEvent {
+
+   enum StatusType
+    {
+        STATUS_PENDING = 0;        // Archive is not started yet
+        STATUS_INPROGRESS = 1;     // Archive is in progress
+        STATUS_COMPLETED = 2;      // Archive is completed
+        STATUS_CANCELLED = 3;      // Archive is cancelled
+        STATUS_DELETED = 4;        // Archive is deleted
+    }
+
+    string archive_uuid = 1;       // Archive UUID
+    string owner_uuid = 2;         // Owner UUID
+    StatusType status = 3;         // Status of the archive from the StatusType enum
+    string archive_url = 4;        // URL to the archive
+}
